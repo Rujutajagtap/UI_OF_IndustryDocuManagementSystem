@@ -1,34 +1,10 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import SearchFlight from './SearchFlight';
-
-import plane1 from '../assets/images/plane1.jpg';
-import plane2 from '../assets/images/plane2.jpg';
-import plane3 from '../assets/images/plane3.jpg';
-import plane5 from '../assets/images/plane5.jpg';
-
-
-
 
 
 const features = [
-    {
-        image : plane1,
-        feature : "Memorable travel"
-    },
-    {
-        image : plane2,
-        feature : "Safe and reliable"
-    },
-    {
-        image : plane3,
-        feature : "Service at its best"
-    },
-    {
-        image : plane5,
-        feature : "Easy and Convinient"
-    }
+    
 ];
 
 function Home(props) {
@@ -52,21 +28,11 @@ function Home(props) {
             <main className="mb-4 mt-5">
                 {/* <!-- Corousal section --> */}
 
-                <section style={styling.section_bg}>
-                    <SearchFlight />
-                </section>
-               
-
-                
-                
-
                 <section className="container-fluid  pt-3 pb-5 section-bg">
-                    
                     <div className="m-auto row">                       
                         {featureCard}
                     </div>
                 </section>
-
             </main>
 
             <Footer />

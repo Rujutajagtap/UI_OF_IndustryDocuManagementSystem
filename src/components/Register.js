@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import UserService from '../services/UserService';
-import planeBG from "../assets/images/planebg1.jpg";
 import Footer from './Footer';
 import Header from './Header';
+//import { useNavigate } from "react-router-dom";
 
 /** 
  *
@@ -22,7 +22,8 @@ export default class Register extends Component {
 			phone:null,
 			username:"",
 			password:"",
-			isadmin:0
+			isadmin:"",
+			department:"",
 		}
 	}
 
@@ -59,11 +60,12 @@ export default class Register extends Component {
 		this.service.addUser(this.state).then(response=>{
 			if(response.status===200){
 				console.log(response.data);
-				this.props.history.push('/login/');
+				this.props.history('/login/');
 			}
 		}).catch(error=>{
 			console.log(error);
-			alert('Registration failed');
+			// alert('Registration failed');
+			alert('Registration ');
 		});
 		this.setState({userId:0,
 		fname:"",
@@ -71,7 +73,8 @@ export default class Register extends Component {
 		phone:0,
 		username:"",
 		password:"",
-		isadmin:0
+		isadmin:"",
+		department:"",
 	});
 		
 	}
@@ -81,7 +84,7 @@ export default class Register extends Component {
     return (
         <div class='pt-5'>
             <Header />
-			<div class="py-5" style={{backgroundImage: `url(${planeBG})`,overflow: 'hidden', height: '1000px'}}>
+			<div class="py-5" style={{overflow: 'hidden', height: '1000px'}}>
 				<div className="row mb-4">
 					<div className="col-lg-8 mx-auto text-center">
 					<h1 className="display-6" style={{color:'white', fontWeight:'50pt'}}>Registration</h1>
@@ -108,6 +111,15 @@ export default class Register extends Component {
 									<h6><span className="form-label">Contact</span></h6>
 										<input  name="phone" pattern="[6-9][0-9]{9}" maxLength="10" value={this.state.phone} onChange={this.handleInput} required className="form-control" />
 								</div>
+								<div className="form-group"> 
+									<h6><span className="form-label">department</span></h6>
+									<input type="text" name="department" value={this.state.department} onChange={this.handleInput} required className="form-control" />								
+								</div>
+								<div className="form-group"> 
+									<h6><span className="form-label">isAdmin</span></h6>
+									<input type="text" name="isadmin" value={this.state.isadmin} onChange={this.handleInput} required className="form-control" />								
+								</div>
+								
                                 <div className="form-group"> 
 									<h6><span className="form-label">Username</span></h6>
 										<input type="text" name="username" value={this.state.username} onChange={this.handleInput} required className="form-control" />

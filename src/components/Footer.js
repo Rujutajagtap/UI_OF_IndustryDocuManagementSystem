@@ -16,7 +16,7 @@ function Footer() {
     <Container>
       <Navbar.Brand className="m-auto">
         
-       Copyright © All rights reserved Airline Ticket Reservations, 2022.
+       Copyright © Industry Document Management, 2022.
       </Navbar.Brand>
     </Container>
   </Navbar>

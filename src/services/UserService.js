@@ -4,7 +4,7 @@ import axios from "axios";
 export default class UserService{
 
     constructor(){
-        this.uri="http://localhost:8080/";
+        this.uri="http://localhost:7575";
        
     }
 
@@ -14,6 +14,21 @@ export default class UserService{
             return response;
         });
     }
+
+     // Service method to register new user
+     async getAll(user){
+        return await axios.post(this.uri+"/getusers",user).then(response=>{
+            return response;
+        });
+    }
+
+
+ // Service method to register new user
+    // async addUser(user){
+    //     return await axios.post(this.uri+"/createuser",user).then(response=>{
+    //         return response;
+    //     });
+    // }
 
     
     getUsers(){
