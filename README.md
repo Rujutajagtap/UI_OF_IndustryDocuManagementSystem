@@ -1,36 +1,16 @@
-# BookMyFlight
-User interface developed for BookMyFlight using React.js Library
-BookMyFlight is an Airplane reservation/booking system.
-The backend API is built in Spring boot
+# IndustryDocumentManagementSystem
+Industry Document Management System can be useful for maintaining data records of all departments .
+The project was built in J2EE using backend Spring Boot, using Frontend React.Js, and MySQL Database.
+
 
 # Features
-- Attractive and responsive UI.
-- User can register and login.
-- User can search for flights, book the flight, add passengers, make payement and generate tickets.
-- A super user - Admin will be responsible for manipulating flights.
-- Interacts with API using Fetch API and Axios library
-- User can choose seats and can leave feedback
-- Additional feature to check weather for the present day and to email ticket
-- User can also check booking history
-- React-Router-DOM used for routing
-
-The service will make calls to our backend API (BookMyFlight)
-Emailjs ued for sending ticket details to user
-Weather API used to get today's weather
-Images are for personal use only and a big credit to Flaticons
 
 ## How to Use/Control?
 
-1. User can search for flights based on source, destination and date without logging in.
-2. User can be directed to login/register using options from navbar
-3. To book a flight user has to login.
-4. For booking user has to enter passengers information.
-5. User enter payment details for ticket generation.
-6. User can either print the ticket and mail the ticket.
-7. User can choose the seat after ticket generation.
+
 
 ## Preview
-<img src="src/assets/images/home.jpg" width="700px" height="450px"></img>
+
 
 ## How To Install.
 
